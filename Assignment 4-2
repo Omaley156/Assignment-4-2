@@ -1,0 +1,38 @@
+
+BONUS_1 = 50.00
+BONUS_2 = 75.00
+BONUS_3 = 100.00
+BONUS_4 = 200.00
+
+employeeName = input("Enter employee's name: ")
+shiftString = input("Enter number of shifts: ")
+transactionString = input("Enter number of transactions: ")
+dollarString = input("Enter transaction dollar value: ")
+
+numShifts = float(shiftString)
+numTransac = float(transactionString)
+dollarValue = float(dollarString)
+
+ProductivtyScore = (dollarValue/numTransac/numShifts)
+if ProductivtyScore >= 200.00:
+    bonus = BONUS_4
+elif ProductivtyScore >= 70 and ProductivtyScore <=199:
+    bonus = BONUS_3
+elif ProductivtyScore >=31 and ProductivtyScore <=69:
+    bonus = BONUS_2
+elif ProductivtyScore <=30:
+    bonus = BONUS_1
+
+
+print("Employee Name: " + employeeName)
+print("Employee Bonus: $" + str(bonus))
+
+
+
+
+
+
+
+
+
+
